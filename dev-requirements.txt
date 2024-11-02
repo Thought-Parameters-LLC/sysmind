@@ -1,0 +1,27 @@
+-r requirements.txt
+
+# formatting 
+black
+isort
+
+# static analysis
+mypy
+flake8
+
+# security
+bandit
+safety
+
+# docs
+sphinx
+sphinx-rtd-theme
+
+# testing
+coverage
+pytest
+pytest-cov
+pytest-mock
+
+# build
+setuptools
+wheel

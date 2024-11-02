@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sysmind"
+version = "0.1.0"
+authors = [
+    { name = "{{ Jason Miller }}", email = "jason@thoughtparameters.com" },
+
+description = "A python package to get system information and metrics."
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/jasonmiller/sysmind"
+"Bug Tracker" = "https://github.com/jasonmiller/sysmind/issues"
+[project.license]
+file="LICENSE"
+[project.scripts]
+sysmind = "sysmind.cli:main"
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sysmind*"]
+
+[tool.setuptools.dynamic]
+
+[tool.setuptools.package-data]
+sysmind = ["py.typed"]
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+strict = true
+
+[tool.ruff]
+select = ["E", "F", "W", "I", "B", "C", "N", "B905"]
+exclude = [".venv", "tests"]
+

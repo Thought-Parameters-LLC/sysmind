@@ -1,0 +1,21 @@
+psutil
+netifaces
+
+# Usb modules
+pyusb==1.2.1
+libusb_package
+
+# Windows Management Instrumentation
+wmi
+
+# Linux Distribution
+distro
+
+# Hosts file
+python-hosts
+
+# DNS Resolution
+dnspython
+
+
+
